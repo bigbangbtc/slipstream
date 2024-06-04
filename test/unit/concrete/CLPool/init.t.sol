@@ -1,4 +1,4 @@
-pragma solidity ^0.7.6;
+pragma solidity >=0.7.6;
 pragma abicoder v2;
 
 import {ICLPool} from "contracts/core/interfaces/ICLPool.sol";

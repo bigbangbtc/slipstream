@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
-pragma solidity =0.7.6;
+pragma solidity >=0.7.6;
 pragma abicoder v2;
 
 import "contracts/core/interfaces/ICLPool.sol";
-import "@uniswap/contracts/libraries/SafeERC20Namer.sol";
 import "base64-sol/base64.sol";
 
+import "./libraries/SafeERC20Namer.sol";
 import "./libraries/ChainId.sol";
 import "./interfaces/INonfungiblePositionManager.sol";
 import "./interfaces/INonfungibleTokenPositionDescriptor.sol";

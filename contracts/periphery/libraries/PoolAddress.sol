@@ -29,10 +29,10 @@ library PoolAddress {
     /// @return pool The contract address of the V3 pool
     function computeAddress(address factory, PoolKey memory key) internal view returns (address pool) {
         require(key.token0 < key.token1);
-        pool = Clones.predictDeterministicAddress({
-            master: ICLFactory(factory).poolImplementation(),
-            salt: keccak256(abi.encode(key.token0, key.token1, key.tickSpacing)),
-            deployer: factory
-        });
+        pool = Clones.predictDeterministicAddress(
+            ICLFactory(factory).poolImplementation(),
+            keccak256(abi.encode(key.token0, key.token1, key.tickSpacing)),
+            factory
+        );
     }
 }

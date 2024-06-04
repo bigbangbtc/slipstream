@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
-pragma solidity =0.7.6;
+pragma solidity >=0.7.6;
 
 import "./interfaces/ICLFactory.sol";
 import "./interfaces/fees/IFeeModule.sol";
@@ -74,10 +74,7 @@ contract CLFactory is ICLFactory {
         require(token0 != address(0));
         require(tickSpacingToFee[tickSpacing] != 0);
         require(getPool[token0][token1][tickSpacing] == address(0));
-        pool = Clones.cloneDeterministic({
-            master: poolImplementation,
-            salt: keccak256(abi.encode(token0, token1, tickSpacing))
-        });
+        pool = Clones.cloneDeterministic(poolImplementation, keccak256(abi.encode(token0, token1, tickSpacing)));
         CLPool(pool).initialize({
             _factory: address(this),
             _token0: token0,

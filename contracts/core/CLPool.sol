@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
-pragma solidity =0.7.6;
+pragma solidity >=0.7.6;
 
 import "./interfaces/ICLPool.sol";
 
@@ -395,7 +395,7 @@ contract CLPool is ICLPool {
                 owner: recipient,
                 tickLower: tickLower,
                 tickUpper: tickUpper,
-                liquidityDelta: int256(amount).toInt128()
+                liquidityDelta: int256(uint256(amount)).toInt128()
             })
         );
 
@@ -506,7 +506,7 @@ contract CLPool is ICLPool {
                 owner: owner,
                 tickLower: tickLower,
                 tickUpper: tickUpper,
-                liquidityDelta: -int256(amount).toInt128()
+                liquidityDelta: -int256(uint256(amount)).toInt128()
             })
         );
 

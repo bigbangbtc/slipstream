@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: BUSL-1.1
-pragma solidity =0.7.6;
+pragma solidity >=0.7.6;
 
 /// @dev Modified lightly from live deployed WETH contract as WETH9 is not a standard ERC20
 contract MockWETH {

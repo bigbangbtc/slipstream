@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
-pragma solidity =0.7.6;
+pragma solidity >=0.7.6;
 
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/utils/Address.sol";
 
@@ -11,7 +12,7 @@ import "./BlockTimestamp.sol";
 
 /// @title ERC721 with permit
 /// @notice Nonfungible tokens that support an approve via signature, i.e. permit
-abstract contract ERC721Permit is BlockTimestamp, ERC721, IERC721Permit {
+abstract contract ERC721Permit is BlockTimestamp, ERC721Enumerable, IERC721Permit {
     /// @dev Gets the current nonce for a token ID and then increments it, returning the original value
     function _getAndIncrementNonce(uint256 tokenId) internal virtual returns (uint256);
 
@@ -52,7 +53,7 @@ abstract contract ERC721Permit is BlockTimestamp, ERC721, IERC721Permit {
         payable
         override
     {
-        require(_blockTimestamp() <= deadline, "PE"); // permit expired
+        require(_blockTimestamp() <= deadline, "Permit expired");
 
         bytes32 digest = keccak256(
             abi.encodePacked(
@@ -62,14 +63,14 @@ abstract contract ERC721Permit is BlockTimestamp, ERC721, IERC721Permit {
             )
         );
         address owner = ownerOf(tokenId);
-        require(spender != owner, "ACO"); // approval to current owner
+        require(spender != owner, "ERC721Permit: approval to current owner");
 
         if (Address.isContract(owner)) {
-            require(IERC1271(owner).isValidSignature(digest, abi.encodePacked(r, s, v)) == 0x1626ba7e, "UA"); // unauthorized
+            require(IERC1271(owner).isValidSignature(digest, abi.encodePacked(r, s, v)) == 0x1626ba7e, "Unauthorized");
         } else {
             address recoveredAddress = ecrecover(digest, v, r, s);
-            require(recoveredAddress != address(0), "IS"); // invalid signature
-            require(recoveredAddress == owner, "UA"); // unauthorized
+            require(recoveredAddress != address(0), "Invalid signature");
+            require(recoveredAddress == owner, "Unauthorized");
         }
 
         _approve(spender, tokenId);

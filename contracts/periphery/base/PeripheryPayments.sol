@@ -10,7 +10,7 @@ import "../libraries/TransferHelper.sol";
 
 import "./PeripheryImmutableState.sol";
 
-import {ReentrancyGuard} from "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
+import {ReentrancyGuard} from "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 
 abstract contract PeripheryPayments is IPeripheryPayments, PeripheryImmutableState, ReentrancyGuard {
     receive() external payable {

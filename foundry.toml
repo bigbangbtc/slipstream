@@ -3,7 +3,7 @@ src = "contracts"
 test = "test"
 out = "out"
 libs = ["lib"]
-solc_version = "0.7.6"
+#solc_version = "0.8.10"
 
 fs_permissions = [{ access = "read-write", path = "./"}]
 

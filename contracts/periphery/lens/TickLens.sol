@@ -2,7 +2,7 @@
 pragma solidity >=0.5.0;
 pragma abicoder v2;
 
-import {Math} from "@openzeppelin/contracts/math/Math.sol";
+import {Math} from "@openzeppelin/contracts/utils/math/Math.sol";
 
 import "contracts/core/interfaces/ICLPool.sol";
 import {TickMath} from "../../core/libraries/TickMath.sol";
@@ -32,7 +32,7 @@ contract TickLens is ITickLens {
         populatedTicks = new PopulatedTick[](numberOfPopulatedTicks);
         for (uint256 i = 0; i < 256; i++) {
             if (bitmap & (1 << i) > 0) {
-                int24 populatedTick = ((int24(tickBitmapIndex) << 8) + int24(i)) * tickSpacing;
+                int24 populatedTick = ((int24(tickBitmapIndex) << 8) + int24(uint24(i))) * tickSpacing;
                 (uint128 liquidityGross, int128 liquidityNet,,,,,,,,) = ICLPool(pool).ticks(populatedTick);
                 populatedTicks[--numberOfPopulatedTicks] = PopulatedTick({
                     tick: populatedTick,
@@ -54,7 +54,7 @@ contract TickLens is ITickLens {
         // fetch bitmaps
         int24 tickSpacing = ICLPool(pool).tickSpacing();
         int16 bitmapIndex = int16((tick / tickSpacing) >> 8);
-        maxBitmaps = Math.min(maxBitmaps, uint256(type(int16).max - bitmapIndex) + 1);
+        maxBitmaps = Math.min(maxBitmaps, uint256(int256(type(int16).max - bitmapIndex)) + 1);
 
         // get all `maxBitmaps` starting from the given tick's bitmap index
         uint256 bitmap;
@@ -74,10 +74,10 @@ contract TickLens is ITickLens {
         int24 tickBitmapIndex;
         for (uint256 j = 0; j < maxBitmaps; j++) {
             bitmap = bitmaps[j];
-            tickBitmapIndex = bitmapIndex + int16(j);
+            tickBitmapIndex = bitmapIndex + int16(uint16(j));
             for (uint256 i = 0; i < 256; i++) {
                 if (bitmap & (1 << i) > 0) {
-                    populatedTick = ((tickBitmapIndex << 8) + int24(i)) * tickSpacing;
+                    populatedTick = ((tickBitmapIndex << 8) + int24(uint24(i))) * tickSpacing;
 
                     (uint128 liquidityGross, int128 liquidityNet,,,,,,,,) = ICLPool(pool).ticks(populatedTick);
 

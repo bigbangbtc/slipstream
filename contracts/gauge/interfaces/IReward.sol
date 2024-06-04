@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity =0.7.6;
+pragma solidity >=0.7.6;
 
 interface IReward {
     event NotifyReward(address indexed from, address indexed reward, uint256 amount);

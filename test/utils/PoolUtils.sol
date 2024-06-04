@@ -1,4 +1,4 @@
-pragma solidity ^0.7.6;
+pragma solidity >=0.7.6;
 pragma abicoder v2;
 
 import {CLFactory} from "contracts/core/CLFactory.sol";
@@ -18,11 +18,9 @@ abstract contract PoolUtils is Test, Constants, Events {
     {
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
         address implementation = CLFactory(factory).poolImplementation();
-        return Clones.predictDeterministicAddress({
-            master: address(implementation),
-            salt: keccak256(abi.encode(token0, token1, tickSpacing)),
-            deployer: address(factory)
-        });
+        return Clones.predictDeterministicAddress(
+            address(implementation), keccak256(abi.encode(token0, token1, tickSpacing)), address(factory)
+        );
     }
 
     /// @dev Use only with test addresses
