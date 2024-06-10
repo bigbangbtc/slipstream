@@ -2,9 +2,9 @@
 pragma solidity >=0.7.6;
 pragma abicoder v2;
 
-import "contracts/core/interfaces/ICLPool.sol";
-import "contracts/core/libraries/FixedPoint128.sol";
-import "contracts/core/libraries/FullMath.sol";
+import "../core/interfaces/ICLPool.sol";
+import "../core/libraries/FixedPoint128.sol";
+import "../core/libraries/FullMath.sol";
 
 import "./interfaces/INonfungiblePositionManager.sol";
 import "./interfaces/INonfungibleTokenPositionDescriptor.sol";

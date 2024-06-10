@@ -2,10 +2,10 @@
 pragma solidity >=0.7.0;
 pragma abicoder v2;
 
-import "contracts/core/interfaces/ICLPool.sol";
-import "contracts/core/libraries/TickMath.sol";
-import "contracts/core/libraries/BitMath.sol";
-import "contracts/core/libraries/FullMath.sol";
+import "../../core/interfaces/ICLPool.sol";
+import "../../core/libraries/TickMath.sol";
+import "../../core/libraries/BitMath.sol";
+import "../../core/libraries/FullMath.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 import "@openzeppelin/contracts/utils/math/SignedSafeMath.sol";

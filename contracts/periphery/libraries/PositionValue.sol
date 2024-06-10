@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 pragma solidity >=0.6.8;
 
-import "contracts/core/interfaces/ICLPool.sol";
-import "contracts/core/libraries/FixedPoint128.sol";
-import "contracts/core/libraries/TickMath.sol";
-import "contracts/core/libraries/Tick.sol";
+import "../../core/interfaces/ICLPool.sol";
+import "../../core/libraries/FixedPoint128.sol";
+import "../../core/libraries/TickMath.sol";
+import "../../core/libraries/Tick.sol";
 import "../interfaces/INonfungiblePositionManager.sol";
 import "./LiquidityAmounts.sol";
 import "./PoolAddress.sol";

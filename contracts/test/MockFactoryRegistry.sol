@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: BUSL-1.1
 pragma solidity >=0.7.6;
 
-import {IFactoryRegistry} from "contracts/core/interfaces/IFactoryRegistry.sol";
-import {EnumerableSet} from "contracts/libraries/EnumerableSet.sol";
+import {IFactoryRegistry} from "../core/interfaces/IFactoryRegistry.sol";
+import {EnumerableSet} from "../libraries/EnumerableSet.sol";
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 
 contract MockFactoryRegistry is Ownable, IFactoryRegistry {

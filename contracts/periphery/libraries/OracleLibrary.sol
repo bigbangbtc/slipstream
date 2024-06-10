@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 pragma solidity >=0.5.0;
 
-import "contracts/core/libraries/FullMath.sol";
-import "contracts/core/libraries/TickMath.sol";
-import "contracts/core/interfaces/ICLPool.sol";
+import "../../core/libraries/FullMath.sol";
+import "../../core/libraries/TickMath.sol";
+import "../../core/interfaces/ICLPool.sol";
 
 /// @title Oracle library
 /// @notice Provides functions to integrate with V3 pool oracle

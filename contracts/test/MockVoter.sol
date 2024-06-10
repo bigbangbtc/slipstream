@@ -2,15 +2,15 @@
 pragma solidity >=0.7.6;
 pragma abicoder v2;
 
-import {CLFactory} from "contracts/core/CLFactory.sol";
-import {CLGaugeFactory} from "contracts/gauge/CLGaugeFactory.sol";
-import {IVoter} from "contracts/core/interfaces/IVoter.sol";
-import {IVotingEscrow} from "contracts/core/interfaces/IVotingEscrow.sol";
-import {IFactoryRegistry} from "contracts/core/interfaces/IFactoryRegistry.sol";
-import {ICLGauge} from "contracts/gauge/interfaces/ICLGauge.sol";
+import {CLFactory} from "../core/CLFactory.sol";
+import {CLGaugeFactory} from "../gauge/CLGaugeFactory.sol";
+import {IVoter} from "../core/interfaces/IVoter.sol";
+import {IVotingEscrow} from "../core/interfaces/IVotingEscrow.sol";
+import {IFactoryRegistry} from "../core/interfaces/IFactoryRegistry.sol";
+import {ICLGauge} from "../gauge/interfaces/ICLGauge.sol";
 import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import {ICLPool} from "contracts/core/interfaces/ICLPool.sol";
-import {IVotingRewardsFactory} from "contracts/test/interfaces/IVotingRewardsFactory.sol";
+import {ICLPool} from "../core/interfaces/ICLPool.sol";
+import {IVotingRewardsFactory} from "../test/interfaces/IVotingRewardsFactory.sol";
 
 contract MockVoter is IVoter {
     // mock addresses used for testing gauge creation, a copy is stored in Constants.sol

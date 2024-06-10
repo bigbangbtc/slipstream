@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 pragma solidity >=0.5.0;
 
-import "contracts/core/interfaces/ICLFactory.sol";
+import "../../core/interfaces/ICLFactory.sol";
 import "@openzeppelin/contracts/proxy/Clones.sol";
 
 /// @title Provides functions for deriving a pool address from the factory, tokens, and the fee

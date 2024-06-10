@@ -4,7 +4,7 @@ pragma abicoder v2;
 
 import {Math} from "@openzeppelin/contracts/utils/math/Math.sol";
 
-import "contracts/core/interfaces/ICLPool.sol";
+import "../../core/interfaces/ICLPool.sol";
 import {TickMath} from "../../core/libraries/TickMath.sol";
 
 import "../interfaces/ITickLens.sol";

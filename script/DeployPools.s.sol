@@ -4,7 +4,7 @@ pragma abicoder v2;
 
 import "forge-std/StdJson.sol";
 import "forge-std/Script.sol";
-import {CLFactory} from "contracts/core/CLFactory.sol";
+import {CLFactory} from "../contracts/core/CLFactory.sol";
 import {IUniswapV3Factory} from "script/interfaces/IUniswapV3Factory.sol";
 import {IUniswapV3Pool} from "script/interfaces/IUniswapV3Pool.sol";
 import "forge-std/console2.sol";

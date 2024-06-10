@@ -5,7 +5,7 @@ import "forge-std/StdJson.sol";
 import "forge-std/Script.sol";
 import "forge-std/console2.sol";
 
-import {NonfungibleTokenPositionDescriptor} from "contracts/periphery/NonfungibleTokenPositionDescriptor.sol";
+import {NonfungibleTokenPositionDescriptor} from "../contracts/periphery/NonfungibleTokenPositionDescriptor.sol";
 
 contract DeployPositionDescriptor is Script {
     using stdJson for string;

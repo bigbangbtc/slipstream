@@ -2,17 +2,17 @@
 pragma solidity >=0.7.6;
 pragma abicoder v2;
 
-import "contracts/periphery/base/PeripheryImmutableState.sol";
-import "contracts/core/libraries/SafeCast.sol";
-import "contracts/core/libraries/TickMath.sol";
-import "contracts/core/libraries/TickBitmap.sol";
-import "contracts/core/interfaces/ICLPool.sol";
-import "contracts/core/interfaces/ICLFactory.sol";
-import "contracts/core/interfaces/callback/ICLSwapCallback.sol";
-import "contracts/core/interfaces/IPool.sol";
-import "contracts/core/interfaces/IPoolFactory.sol";
-import "contracts/periphery/libraries/Path.sol";
-import "contracts/periphery/libraries/CallbackValidation.sol";
+import "../../periphery/base/PeripheryImmutableState.sol";
+import "../../core/libraries/SafeCast.sol";
+import "../../core/libraries/TickMath.sol";
+import "../../core/libraries/TickBitmap.sol";
+import "../../core/interfaces/ICLPool.sol";
+import "../../core/interfaces/ICLFactory.sol";
+import "../../core/interfaces/callback/ICLSwapCallback.sol";
+import "../../core/interfaces/IPool.sol";
+import "../../core/interfaces/IPoolFactory.sol";
+import "../../periphery/libraries/Path.sol";
+import "../../periphery/libraries/CallbackValidation.sol";
 
 import "../interfaces/IMixedRouteQuoterV1.sol";
 import "../libraries/PoolTicksCounter.sol";

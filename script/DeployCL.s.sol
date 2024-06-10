@@ -4,16 +4,16 @@ pragma solidity >=0.7.6;
 import "forge-std/StdJson.sol";
 import "forge-std/Script.sol";
 
-import {CLPool} from "contracts/core/CLPool.sol";
-import {CLFactory} from "contracts/core/CLFactory.sol";
-import {NonfungibleTokenPositionDescriptor} from "contracts/periphery/NonfungibleTokenPositionDescriptor.sol";
-import {NonfungiblePositionManager} from "contracts/periphery/NonfungiblePositionManager.sol";
-import {CLGauge} from "contracts/gauge/CLGauge.sol";
-import {CLGaugeFactory} from "contracts/gauge/CLGaugeFactory.sol";
-import {CustomSwapFeeModule} from "contracts/core/fees/CustomSwapFeeModule.sol";
-import {CustomUnstakedFeeModule} from "contracts/core/fees/CustomUnstakedFeeModule.sol";
-import {MixedRouteQuoterV1} from "contracts/periphery/lens/MixedRouteQuoterV1.sol";
-import {QuoterV2} from "contracts/periphery/lens/QuoterV2.sol";
+import {CLPool} from "../contracts/core/CLPool.sol";
+import {CLFactory} from "../contracts/core/CLFactory.sol";
+import {NonfungibleTokenPositionDescriptor} from "../contracts/periphery/NonfungibleTokenPositionDescriptor.sol";
+import {NonfungiblePositionManager} from "../contracts/periphery/NonfungiblePositionManager.sol";
+import {CLGauge} from "../contracts/gauge/CLGauge.sol";
+import {CLGaugeFactory} from "../contracts/gauge/CLGaugeFactory.sol";
+import {CustomSwapFeeModule} from "../contracts/core/fees/CustomSwapFeeModule.sol";
+import {CustomUnstakedFeeModule} from "../contracts/core/fees/CustomUnstakedFeeModule.sol";
+import {MixedRouteQuoterV1} from "../contracts/periphery/lens/MixedRouteQuoterV1.sol";
+import {QuoterV2} from "../contracts/periphery/lens/QuoterV2.sol";
 
 contract DeployCL is Script {
     using stdJson for string;

@@ -2,7 +2,7 @@
 pragma solidity >=0.7.6;
 pragma abicoder v2;
 
-import "contracts/core/interfaces/ICLPool.sol";
+import "../core/interfaces/ICLPool.sol";
 import "base64-sol/base64.sol";
 
 import "./libraries/SafeERC20Namer.sol";

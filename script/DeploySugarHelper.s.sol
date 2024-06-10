@@ -5,7 +5,7 @@ import "forge-std/StdJson.sol";
 import "forge-std/Script.sol";
 import "forge-std/console2.sol";
 
-import {SugarHelper} from "contracts/periphery/SugarHelper.sol";
+import {SugarHelper} from "../contracts/periphery/SugarHelper.sol";
 
 contract DeploySugarHelper is Script {
     uint256 public deployPrivateKey = vm.envUint("PRIVATE_KEY_DEPLOY");

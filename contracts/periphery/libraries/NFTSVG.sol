@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 pragma solidity >=0.7.6;
 
-import "contracts/core/libraries/TickMath.sol";
+import "../../core/libraries/TickMath.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 import "base64-sol/base64.sol";

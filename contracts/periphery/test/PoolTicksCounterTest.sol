@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
-import "contracts/core/interfaces/ICLPool.sol";
+import "../../core/interfaces/ICLPool.sol";
 
 pragma solidity >=0.6.0;
 
