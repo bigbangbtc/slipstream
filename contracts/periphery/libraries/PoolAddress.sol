@@ -2,7 +2,7 @@
 pragma solidity >=0.5.0;
 
 import "../../core/interfaces/ICLFactory.sol";
-import "@openzeppelin/contracts/proxy/Clones.sol";
+import "../../../lib/openzeppelin-contracts/contracts/proxy/Clones.sol";
 
 /// @title Provides functions for deriving a pool address from the factory, tokens, and the fee
 library PoolAddress {

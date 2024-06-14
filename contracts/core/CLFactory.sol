@@ -5,7 +5,7 @@ import "./interfaces/ICLFactory.sol";
 import "./interfaces/fees/IFeeModule.sol";
 import "./interfaces/IVoter.sol";
 import "./interfaces/IFactoryRegistry.sol";
-import "@openzeppelin/contracts/proxy/Clones.sol";
+import "../../lib/openzeppelin-contracts/contracts/proxy/Clones.sol";
 import "@nomad-xyz/src/ExcessivelySafeCall.sol";
 import "./CLPool.sol";
 

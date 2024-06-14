@@ -2,7 +2,7 @@
 pragma solidity >=0.7.6;
 pragma abicoder v2;
 
-import {Math} from "@openzeppelin/contracts/utils/math/Math.sol";
+import {Math} from "../../lib/openzeppelin-contracts/contracts/utils/math/Math.sol";
 import {SqrtPriceMath} from "../core/libraries/SqrtPriceMath.sol";
 import {LiquidityAmounts} from "./libraries/LiquidityAmounts.sol";
 import {PositionValue} from "./libraries/PositionValue.sol";

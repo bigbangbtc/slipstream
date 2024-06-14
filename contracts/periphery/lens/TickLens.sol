@@ -2,7 +2,7 @@
 pragma solidity >=0.5.0;
 pragma abicoder v2;
 
-import {Math} from "@openzeppelin/contracts/utils/math/Math.sol";
+import {Math} from "../../../lib/openzeppelin-contracts/contracts/utils/math/Math.sol";
 
 import "../../core/interfaces/ICLPool.sol";
 import {TickMath} from "../../core/libraries/TickMath.sol";

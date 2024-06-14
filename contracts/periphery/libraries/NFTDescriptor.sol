@@ -6,9 +6,9 @@ import "../../core/interfaces/ICLPool.sol";
 import "../../core/libraries/TickMath.sol";
 import "../../core/libraries/BitMath.sol";
 import "../../core/libraries/FullMath.sol";
-import "@openzeppelin/contracts/utils/Strings.sol";
-import "@openzeppelin/contracts/utils/math/SafeMath.sol";
-import "@openzeppelin/contracts/utils/math/SignedSafeMath.sol";
+import "../../../lib/openzeppelin-contracts/contracts/utils/Strings.sol";
+import "../../../lib/openzeppelin-contracts/contracts/utils/math/SafeMath.sol";
+import "../../../lib/openzeppelin-contracts/contracts/utils/math/SignedSafeMath.sol";
 import "./HexStrings.sol";
 
 library NFTDescriptor {

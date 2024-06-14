@@ -2,8 +2,8 @@
 pragma solidity >=0.7.6;
 
 import "../../core/libraries/TickMath.sol";
-import "@openzeppelin/contracts/utils/Strings.sol";
-import "@openzeppelin/contracts/utils/math/SafeMath.sol";
+import "../../../lib/openzeppelin-contracts/contracts/utils/Strings.sol";
+import "../../../lib/openzeppelin-contracts/contracts/utils/math/SafeMath.sol";
 import "base64-sol/base64.sol";
 
 /// @title NFTSVG

@@ -2,15 +2,15 @@
 pragma solidity >=0.7.6;
 pragma abicoder v2;
 
-import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import {ERC721Holder} from "@openzeppelin/contracts/token/ERC721/utils/ERC721Holder.sol";
+import {IERC20} from "../../lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol";
+import {ERC721Holder} from "../../lib/openzeppelin-contracts/contracts/token/ERC721/utils/ERC721Holder.sol";
 import {ICLGauge} from "./interfaces/ICLGauge.sol";
 import {ICLGaugeFactory} from "./interfaces/ICLGaugeFactory.sol";
 import {IVoter} from "../core/interfaces/IVoter.sol";
 import {ICLPool} from "../core/interfaces/ICLPool.sol";
 import {TransferHelper} from "contracts/periphery/libraries/TransferHelper.sol";
 import {INonfungiblePositionManager} from "contracts/periphery/interfaces/INonfungiblePositionManager.sol";
-import {ReentrancyGuard} from "@openzeppelin/contracts/security/ReentrancyGuard.sol";
+import {ReentrancyGuard} from "../../lib/openzeppelin-contracts/contracts/security/ReentrancyGuard.sol";
 import {EnumerableSet} from "contracts/libraries/EnumerableSet.sol";
 import {SafeCast} from "./libraries/SafeCast.sol";
 import {FullMath} from "../core/libraries/FullMath.sol";

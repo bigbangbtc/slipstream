@@ -4,7 +4,7 @@ pragma solidity >=0.7.6;
 import "../core/interfaces/ICLPool.sol";
 import "./interfaces/ICLGaugeFactory.sol";
 import "./CLGauge.sol";
-import "@openzeppelin/contracts/proxy/Clones.sol";
+import "../../lib/openzeppelin-contracts/contracts/proxy/Clones.sol";
 
 contract CLGaugeFactory is ICLGaugeFactory {
     /// @inheritdoc ICLGaugeFactory
